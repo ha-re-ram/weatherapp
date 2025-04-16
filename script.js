@@ -1,6 +1,6 @@
 // script.js
 const menu = document.getElementById('menu');
-const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu-toggle');
 
 mobileMenu.addEventListener('click', () => {
     menu.classList.toggle('active');
@@ -73,6 +73,7 @@ function fetchWeather(url) {
 }
 
 function updateWeatherData(data) {
+    document.getElementById('weather-info').style.display = 'block';
     locationName.textContent = data.name;
     temperature.textContent = `Temperature: ${data.main.temp} °C`;
     description.textContent = `Description: ${data.weather[0].description}`;
