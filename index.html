@@ -1,43 +1,48 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weather App</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="header">
+  <div class="header">
     <h1>Weather App</h1>
     <button id="mobile-menu-toggle">&#9776;</button>
-</div>
+    <button id="theme-toggle">Toggle Theme</button>
+  </div>
 
-<div class="menu" id="menu">
+  <div class="menu" id="menu">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-</div>
+  </div>
 
-<div class="main">
+  <div class="main">
     <div class="weather-container">
-        <form id="location-form">
-            <input type="text" id="location-input" placeholder="Enter location...">
-            <button type="submit">Search</button>
-            <button type="button" id="use-location">Use My Location</button>
-        </form>
-        <div id="weather-info">
-            <h2 id="location-name"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
-        </div>
+      <form id="location-form">
+        <input type="text" id="location-input" placeholder="Enter location...">
+        <button type="submit">Search</button>
+        <button type="button" id="use-location">Use My Location</button>
+      </form>
+      <div id="loading" class="hidden">Loading...</div>
+      <div id="weather-info" class="hidden">
+        <h2 id="location-name"></h2>
+        <img id="weather-icon" src="" alt="Weather Icon">
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="feels-like"></p>
+        <p id="temp-range"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+      </div>
     </div>
-</div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

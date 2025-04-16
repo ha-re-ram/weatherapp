@@ -1,138 +1,133 @@
+
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-}
-
-.header {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .header {
     background-color: #3498db;
     color: #fff;
     text-align: center;
     padding: 1em 0;
-}
-
-.header h1 {
-    margin: 0;
-}
-
-.menu {
+    position: relative;
+  }
+  
+  .header button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  #theme-toggle {
+    left: auto;
+    right: 10px;
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+  
+  .menu {
     background-color: #2980b9;
     color: #fff;
     width: 100%;
     text-align: center;
     padding: 1em 0;
     display: none;
-}
-
-.menu.active {
+  }
+  
+  .menu.active {
     display: block;
-}
-
-.menu ul {
+  }
+  
+  .menu ul {
     list-style: none;
     padding: 0;
-}
-
-.menu ul li {
+  }
+  
+  .menu ul li {
     display: inline;
     margin: 0 10px;
-}
-
-.menu ul li a {
+  }
+  
+  .menu ul li a {
     text-decoration: none;
     color: #fff;
-}
-
-.main {
+  }
+  
+  .main {
     padding: 20px;
-}
-
-.weather-container {
+  }
+  
+  .weather-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-#weather-info {
-    display: none;
-}
-
-#location-form {
+    transition: background-color 0.3s;
+  }
+  
+  body.dark-mode .weather-container {
+    background-color: #34495e;
+  }
+  
+  #location-form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 20px;
-}
-
-#location-input {
+  }
+  
+  #location-input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 200px;
-}
-
-#location-input:focus {
-    outline: none;
-    border-color: #3498db;
-}
-
-button {
+  }
+  
+  button {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #3498db;
-    color: #fff;
-}
-
-#use-location {
-    margin-left: 10px;
+  }
+  
+  #use-location {
     background-color: #2ecc71;
-}
-
-#use-location:hover {
+    color: white;
+  }
+  
+  #use-location:hover {
     background-color: #27ae60;
-}
-
-@media (max-width: 768px) {
-    .menu ul {
-        display: block;
-    }
-    .menu ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    .header h1 {
-        font-size: 1.5em;
-    }
-    .menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    .menu.active {
-        display: block;
-    }
-    .menu.active ul {
-        text-align: center;
-    }
-    .header button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background-color: transparent;
-        color: #fff;
-        border: none;
-        font-size: 1.5em;
-    }
-    .main {
-        padding-top: 50px;
-    }
-}
+  }
+  
+  #loading {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  img#weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  
