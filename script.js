@@ -80,3 +80,4 @@ function updateWeatherData(data) {
     humidity.textContent = `Humidity: ${data.main.humidity} %`;
     windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
 }
+locationInput.value = "";
